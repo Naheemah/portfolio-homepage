@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.banner.night {
+    background: #333;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    width: 150px;
+    height: 150px;
+    background: url('dotted.png');
+    background-size: cover;
+    animation: animateColor 10s linear infinite;
+    transition-delay: -5s;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: #333;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header .logo span {
+    color: #2196f3;
+}
+
+header ul {
+    display: flex;
+    gap: 40px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.content {
+    position: relative;
+    max-width: 700px;
+    z-index: 10;
+}
+
+.content h3 {
+    font-size: 2em;
+    color: #333;
+    font-weight: 200;
+    transition: 0.5s;
+}
+
+.content h2 {
+    font-size: 5.5em;
+    color: #333;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.content h2 span {
+    color: #e91e63;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.content button {
+    position: relative;
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.content button.chat {
+    background: transparent;
+    color: #333;
+}
+
+.content button.chat i {
+    position: relative;
+    top: 5px;
+    color: #e91e63;
+    font-size: 1.5em;
+}
+
+.sci {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    text-decoration: none;
+    font-size: 1.75em;
+    color: #333;
+}
+
+.sci li a:hover {
+    color: #2196f3;
+}
+
+.dayNight {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.banner.night .dayNight {
+    background: #444;
+    color: #fff;
+}
+
+.dayNight i:nth-child(2),
+.banner.night .dayNight i:nth-child(1) {
+    display: none;
+}
+
+.banner.night .dayNight i:nth-child(2) {
+    display: block;
+}
+
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content h3,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night .sci li a,
+.banner.night header ul li a {
+    color: #fff;
+}
+
+.banner.night .sci li a:hover {
+    color: #2196f3;
+}
+
+.colors {
+    position: absolute;
+    right: 100px;
+    width: 400px;
+    animation: animateColor 8s ease-in-out infinite;
+}
+
+@keyframes animateColor {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+.girl {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 200px;
+    animation: animateGirl 8s ease-in-out infinite;
+}
+
+@keyframes animateGirl {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(-50px);
+    }
+}
+
+/*.content .text {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.text li {
+    color: gray;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 500px;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.head2 li span {
+    position: relative;
+}
+.head2 li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(white,wheat);
+    border-left: 2px solid #ec6060;
+    animation: typing 1.5s steps(10) infinite;
+}
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}*/
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-icon/icons-1.8.1/font/bootstrap-icons.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <section class="banner">
+        <header>
+            <a href="#" class="logo"><span>My</span>Portfolio_</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h3>Hey_</h3>
+            <h2 class="head2">I am <span id="text">Smile_Dev</span>
+            </h2>
+            <p>lorem ispum dolor sit amet consectetur adipisicing
+                elit. Iste, aut qui? Sit at tempore modi harum nisi
+                assumenda nostrum quam.
+            </p>
+            <button>Hire Me</button>
+            <button class="chat"><i class="bi-chat-fill"></i>
+                Let's Chat
+            </button>
+        </div>
+        <img src="colors.png" class="colors">
+        <img src="girle.jpg" class="girl">
+        <ul class="sci">
+            <li><a href="#"><i class="bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi-linkedin"></i></a></li>
+            <li><a href="#"><i class="bi-skype"></i></a></li>
+            <li><a href="#"><i class="bi-instagram"></i></a></li>
+        </ul>
+        <div class="dayNight">
+            <i class="bi-moon"></i>
+            <i class="bi-sun"></i>
+        </div>
+    </section>
+    <script>
+        
+            //let typingText = new Typed("#text", {
+            //strings : ["a Designer", "a Coder"],
+            //loop : true,
+            //typeSpeed :100,
+            //backSpeed : 50,
+            //backDelay : 1000,
+        //})
+            
+        let banner = document.querySelector('.banner');
+        let dayNight = document.querySelector('.dayNight');
+        dayNight.onclick = function(){
+            banner.classList.toggle('night');
+        }
+    </script>
+    <script src="https://unpkg.com/typed/js@2.0.132/dist/typed.umd.js"></script>
+    <!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>-->
+</body>
+</html>
